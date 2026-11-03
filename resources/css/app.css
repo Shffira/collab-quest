@@ -1,9 +1,56 @@
 @import 'tailwindcss';
 
+@source '../views/**/*.blade.php';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    
+    --color-forest-950: #142a1b;
+    --color-forest-900: #1b3823;
+    --color-forest-800: #244b2e;
+    --color-forest-700: #2e5e3a;
+    --color-forest-600: #387348;
+    --color-forest-500: #468e59;
+    --color-forest-200: #cbe0d0;
+    --color-forest-100: #e2ede5;
+    --color-forest-50:  #f0f6f2;
+
+    --color-sage-900: #2b362c;
+    --color-sage-800: #3a4a3c;
+    --color-sage-700: #4a5e4d;
+    --color-sage-600: #5c745f;
+    --color-sage-500: #739077;
+    --color-sage-300: #b5c7b8;
+    --color-sage-200: #d1ded3;
+    --color-sage-100: #e7eee8;
+    --color-sage-50:  #f5f8f5;
+
+    --color-cream-100: #fbfdfa;
+    --color-cream-50:  #f8faf7;
+}
+
+/* Base custom styling matching natural sage minimalist reference */
+body {
+    background-color: #f5f8f5;
+    color: #243326;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for task list */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #edf3ee;
+}
+::-webkit-scrollbar-thumb {
+    background: #c3d4c6;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a1b8a5;
 }
